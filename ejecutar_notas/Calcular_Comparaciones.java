@@ -10,27 +10,34 @@ package ejecutar_notas;
  */
 public class Calcular_Comparaciones {
     
-    int Estudiantes_arriba;
+   //Se declaran las variables a utilizar
+    
+   int Estudiantes_arriba;
    int Estudiantes_abajo;
    int promedio;
    int suma;
    double notas2[];
    
+   //Se le da el tamaño al array llamando el tamaño del array principal
+   
    public void establecernotas2(double notas2[]){
        
        this.notas2= notas2;
    }
+   //Se crea el constructor que realiza las operaciones
    
    public void Calcular_Compararciones(){
        
        for(int i=0; i<notas2.length; i++){
            
-           suma+= notas2[i];
+           suma+= notas2[i];//Se suman todas las notas
        }
        
-       promedio=suma/notas2.length;
+       promedio=suma/notas2.length;//Se divide la suma de las notas por el total de notas ingresadas
        
        for(int i=0; i<notas2.length; i++){
+           
+           //Se comparan que notas estan por abajo y cuales estan por arriba del promedio
            
            if(notas2[i]<promedio){
                
@@ -42,15 +49,15 @@ public class Calcular_Comparaciones {
        }  
    }
 
-    public int getEstudiantes_arriba() {
+    public int getEstudiantes_arriba() {//retornamos la variable Estudiantes_arriba
         return Estudiantes_arriba;
     }
 
-    public int getEstudiantes_abajo() {
+    public int getEstudiantes_abajo() {//retornamos la variable Estudiantes_abajo
         return Estudiantes_abajo;
     }
 
-    public int getPromedio() {
+    public int getPromedio() {//retornamos la variable promedio
         return promedio;
     }
 }
