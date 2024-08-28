@@ -10,7 +10,7 @@ package ejecutar_notas;
  */
 public class Operaciones_notas {
    
-    double Notas2[]= new double [15];
+    double Notas2[]= new double [15];//un comentario
     double Suma_T;
     double MayorNota;
     double Promedio;
