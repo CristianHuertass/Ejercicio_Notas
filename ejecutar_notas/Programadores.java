@@ -12,12 +12,17 @@ public class Programadores extends Empleados {
     
     double Salariofijo;
 
-    public Programadores(int Codigo_em, String Nombre, double Salariofijo) {
+    public Programadores(int Codigo_em, String Nombre) {
         
         super(Codigo_em,Nombre);
-       
+     
+    }
+
+    public void setSalariofijo(double Salariofijo) {
         this.Salariofijo = Salariofijo;
     }
+    
+    
     
     @Override
     public void calcularsalario(){
@@ -28,5 +33,6 @@ public class Programadores extends Empleados {
     @Override
     public void mostrardatos(){
         
+        System.out.println("\nEl salario del empleado con codigo "+Codigo_em+" y llamado "+Nombre+" es: "+Salariofijo);
     }
 }

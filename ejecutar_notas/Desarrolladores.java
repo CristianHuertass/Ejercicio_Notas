@@ -16,13 +16,17 @@ public class Desarrolladores extends Empleados{
     int lineasc;
     double bonificacion;
 
-    public Desarrolladores(int Codigo_em, String Nombre, double salario, double valorlc, int lineasc, double bonificacion ) {
-        super(Codigo_em, Nombre);
+    public Desarrolladores(int Codigo_em, String Nombre) {
         
-        this.salario = salario;
+        super(Codigo_em, Nombre);
+    }
+
+    public void setValorlc(double valorlc) {
         this.valorlc = valorlc;
+    }
+
+    public void setLineasc(int lineasc) {
         this.lineasc = lineasc;
-        this.bonificacion = bonificacion;
     }
     
     @Override
@@ -34,12 +38,9 @@ public class Desarrolladores extends Empleados{
         
     }
 
-    public double getSalariototal() {
-        return salariototal;
-    }
-    
     @Override
     public void mostrardatos(){
         
+        System.out.println("\nEl salario del empleado con codigo "+Codigo_em+" y llamado "+Nombre+" es: "+salariototal);
     }
 }

@@ -12,13 +12,21 @@ public class Analistas extends Empleados{
     
     double Salario_m;
     double Descuento;
-
-    public Analistas(int Codigo_em, String Nombre, double Salario_m, double Descuento) {
-        super(Codigo_em, Nombre);
+    
+    public Analistas(int Codigo_em, String Nombre) {
         
+        super(Codigo_em, Nombre);    
+    }
+
+    public void setSalario_m(double Salario_m) {
         this.Salario_m = Salario_m;
+    }
+
+    public void setDescuento(double Descuento) {
         this.Descuento = Descuento;
     }
+    
+    
     
     @Override
     public void calcularsalario(){
@@ -26,15 +34,11 @@ public class Analistas extends Empleados{
         Descuento=Salario_m*4/100;
         Salario_m= Salario_m-Descuento;
     }
-
-    public double getSalario_m() {
-        return Salario_m;
-    }
     
     @Override
     public void mostrardatos(){
         
-        
+        System.out.println("\nEl salario del empleado con codigo "+Codigo_em+" y llamado "+Nombre+" es: "+Salario_m);
     }
         
 }

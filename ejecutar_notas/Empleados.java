@@ -29,7 +29,6 @@ public abstract class Empleados {
     
     public abstract void calcularsalario();
        
-    public void mostrardatos(){
+    public abstract void mostrardatos();
         
-    }
 }
